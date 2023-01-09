@@ -10,7 +10,7 @@ namespace ERP.Entities.Enum
     {
         None = 0,
         Active = 1,
-        Delete = 2,
-        Update = 3
+        Deleted = 2,
+        Updated = 3
     }
 }
