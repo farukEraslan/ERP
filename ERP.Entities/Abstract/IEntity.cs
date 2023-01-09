@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ERP.Entities.Abstract
 {
-    public interface ICoreEntity<T> where T : class
+    public interface IEntity<T>
     {
-
+        T Id { get; set; }
     }
 }
