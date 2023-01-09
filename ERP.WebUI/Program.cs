@@ -1,10 +1,14 @@
+using ERP.Core.Abstract;
 using ERP.DAL.Context;
+using ERP.Service.Base;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped(typeof(ICoreService<>), typeof(BaseService<>));
 
 // Server Connnection
 builder.Services.AddDbContext<ERPContext>(options => options.UseSqlServer("Server = desktop-ufhr98h; Database = ERPProject; uid = sa; pwd = 123;"));
