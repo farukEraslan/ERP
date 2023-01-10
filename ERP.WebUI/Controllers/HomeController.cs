@@ -21,5 +21,20 @@ namespace ERP.WebUI.Controllers
         {
             return View();
         }
+
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public IActionResult Services()
+        {
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
     }
 }
