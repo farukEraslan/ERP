@@ -1,9 +1,14 @@
-﻿
-@model UserEntity
+﻿@model UserEntity
 
 @{
     ViewData["Title"] = "Login";
 }
 
 <h1>Login</h1>
-
+<form asp-action="Login" asp-controller="Account" method="post">
+    <label asp-for="EmailAddress">Email Adresi</label>
+    <input asp-for="EmailAddress" type="email" placeholder="Email Adresi Giriniz" />
+    <label asp-for="Password">Şifre</label>
+    <input asp-for="Password" type="password" placeholder="Şifre" />
+    <button type="submit">Giriş Yap</button>
+</form>

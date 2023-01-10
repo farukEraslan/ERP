@@ -16,6 +16,32 @@ namespace ERP.WebUI.Controllers
         }
 
         [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Register(UserEntity user)
+        {
+            user.Id = Guid.NewGuid();
+            _userService.Add(user);
+            return View();
+        }
+
+        public bool PasswordControl(string password, string passwordRepeat)
+        {
+            if (password == passwordRepeat)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }            
+        }
+
+        [HttpGet]
         public IActionResult Login()
         {
             return View();
