@@ -23,11 +23,14 @@
                         @if (string.IsNullOrEmpty(User.Identity.Name))
                         {
                             <li class="tm-nav-item">
-                                <a asp-action="Login" asp-controller="Account" asp-area="" class="tm-nav-link">
-                                    <i class="fas fa-pen"></i>
-                                    Giriş Yap
-                                </a>
+                                <a asp-action="Login" asp-controller="Account" asp-area="" class="nav-link text-dark">Giriş Yap</a>
                             </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">Çıkış Yap</a>
+                        </li>
                         }
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
