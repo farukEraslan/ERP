@@ -43,6 +43,14 @@
     <div class="container-fluid bg-dark px-0">
         <div class="row g-0 d-none d-lg-flex">
             <div class="col-lg-6 ps-5 text-start">
+                @if (string.IsNullOrEmpty(User.Identity.Name))
+                {
+                    <a asp-action="Login" asp-controller="Account" asp-area="" class="btn btn-primary px-3 d-none d-lg-block" style="width:120px">Giriş Yap</a>
+                }
+                else
+                {
+                    <a asp-action="Logout" asp-controller="Account" asp-area="" class="btn btn-primary px-3 d-none d-lg-block" style="width:120px">Çıkış Yap</a>
+                }
                 @*<div class="h-100 d-inline-flex align-items-center text-white">
                     <span>Follow Us:</span>
                     <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
@@ -63,7 +71,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
         <a asp-action="Index" asp-controller="Home" asp-area="" class="navbar-brand ps-5 me-0">
-            <h1 class="text-white m-0">Gürtaş</h1>
+            <h1 class="text-white m-0">Gürtaş Makina</h1>
         </a>
         <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -74,18 +82,18 @@
                 <a asp-area="" asp-controller="Home" asp-action="AboutUs" class="nav-item nav-link">Hakkımızda</a>
                 <a asp-area="" asp-controller="Home" asp-action="Services" class="nav-item nav-link">Hizmetlerimiz</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Daha Fazla</a>
                     <div class="dropdown-menu bg-light m-0">
-                        <a href="project.html" class="dropdown-item">Projects</a>
-                        <a href="feature.html" class="dropdown-item">Features</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
+                        <a asp-action="MissionVision" asp-controller="Home" asp-area="" class="dropdown-item">Misyon ve Vizyon</a>
+                        <a asp-action="Projects" asp-controller="Home" asp-area="" class="dropdown-item">Projeler</a>
+                        <a asp-action="OurTeam" asp-controller="Home" asp-area="" class="dropdown-item">Ekibimiz</a>
+                        <a asp-action="References" asp-controller="Home" asp-area="" class="dropdown-item">Referanslar</a>
+                        @*<a href="404.html" class="dropdown-item">404 Page</a>*@
                     </div>
                 </div>
                 <a asp-area="" asp-controller="Home" asp-action="Contact" class="nav-item nav-link">İletişim Bilgileri</a>
             </div>
-            <a href="" class="btn btn-primary px-3 d-none d-lg-block">Teklif İsteyin</a>
+            <a asp-action="Quote" asp-controller="Home" asp-area="" class="btn btn-primary px-3 d-none d-lg-block">Teklif İsteyin</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -100,7 +108,7 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Ofisimiz</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Karadenizliler Mah. Ordulu Cad. <br /> No:81 Başiskele/Kocaeli</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Karadenizliler Mah. Ordulu Cad. No:81 Başiskele/Kocaeli</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+90-262-335-3808</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@gurtasmakina.com</p>
                     @*<div class="d-flex pt-3">
@@ -135,14 +143,10 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Son Haberler</h5>
-                    <p>Son haberlerden haberdar olmak için <br /> bültenimize abone olun.</p>
+                    <p>Son haberlerden haberdar olmak için bültenimize abone olun.</p>
                     <div class="position-relative w-100">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
-                               placeholder="Email Adresi">
-                        <button type="button"
-                                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
-                            Abone ol
-                        </button>
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email" placeholder="Email Adresi">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Abone ol</button>
                     </div>
                 </div>
             </div>

@@ -36,5 +36,30 @@ namespace ERP.WebUI.Controllers
         {
             return View();
         }
+
+        public IActionResult Missionvision()
+        {
+            return View();
+        }
+
+        public IActionResult Projects()
+        {
+            return View();
+        }
+
+        public IActionResult OurTeam()
+        {
+            return View();
+        }
+
+        public IActionResult References()
+        {
+            return View();
+        }
+
+        public IActionResult Quote()
+        {
+            return View();
+        }
     }
 }
