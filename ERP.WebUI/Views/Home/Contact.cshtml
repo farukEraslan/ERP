@@ -1,0 +1,137 @@
+﻿
+@{
+    ViewData["Title"] = "Contact";
+}
+
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <h1 class="display-3 text-white animated slideInRight">İletişim Bilgileri</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb animated slideInRight mb-0">
+                <li class="breadcrumb-item"><a asp-action="Contact" asp-controller="Home" asp-area="" >Anasayfa</a></li>
+                <li class="breadcrumb-item"><a >Sayfalar</a></li>
+                <li class="breadcrumb-item active" aria-current="page">İletişim Bilgileri</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Contact Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 justify-content-center mb-5">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bg-light text-center h-100 p-5">
+                    <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-phone-alt fa-2x text-primary"></i>
+                    </div>
+                    <h4 class="mb-3">Telefon</h4>
+                    <p class="mb-2">+90-262-335-3808</p>
+                    <a class="btn btn-primary px-4" href="tel:+902623353808">
+                        Bizi Arayın <i class="fa fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="bg-light text-center h-100 p-5">
+                    <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-envelope-open fa-2x text-primary"></i>
+                    </div>
+                    <h4 class="mb-3">E-Posta</h4>
+                    <p class="mb-2">info@gurtasmakina.com</p>
+                    <a class="btn btn-primary px-4" href="mailto:info@gurtasmakina.com">
+                        E-Posta Yollayın <i class="fa fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="bg-light text-center h-100 p-5">
+                    <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-map-marker-alt fa-2x text-primary"></i>
+                    </div>
+                    <h4 class="mb-3">Adres</h4>
+                    <p class="mb-2">Karadenizliler Mah. Ordulu Cad. No:81 Başiskele/Kocaeli</p>
+                    <a class="btn btn-primary px-4" href="https://goo.gl/maps/yp5HenMuBJj765vd9"
+                       target="blank">Yol Tarifi<i class="fa fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+                <iframe class="w-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.5895109053126!2d29.96243271571324!3d40.74905714328393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb4550e573c3b5%3A0x24ff3577e774fdb!2zR8OcUlRBxZ4!5e0!3m2!1str!2str!4v1673594262176!5m2!1str!2str"
+                        frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+            </div>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <p class="fw-medium text-uppercase text-primary mb-2">Bize Ulaşın</p>
+                <h1 class="display-5 mb-4">Görüşleriniz bizim için değerli...</h1>
+                <p class="mb-4">Deneyimli ve uzman kadromuz ile her türlü soru, görüş ve önerileriniz için bize ulaşmanız yeterli. Tüm istekleriniz için <b>azami 5 iş günü</b> içerisinde tarafınıza geri dönüş sağlanacaktır.</p>
+                <div class="row g-4">
+                    <div class="col-6">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-square bg-primary rounded-circle">
+                                <i class="fa fa-phone-alt text-white"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6>Telefon</h6>
+                                <span>+90-262-335-3808</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-square bg-primary rounded-circle">
+                                <i class="fa fa-envelope text-white"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6>E-Posta</h6>
+                                <span>info@gurtasmakina.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" placeholder="Adınız">
+                                <label for="name">Adınız</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" placeholder="E-Posta Adresiniz">
+                                <label for="email">E-Posta Adresiniz</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="subject" placeholder="Konu">
+                                <label for="subject">Konu</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Mesajınız" id="message"
+                                          style="height: 150px"></textarea>
+                                <label for="message">Mesajınız</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary py-3 px-5" type="submit">Gönder</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+
